@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Bienvenidos</title>
+</head>
+<body>
+    <div>
+        <h1>¡Bienvenidos!</h1>
+        <p>Se ha visitado esta página {{ count2 }} veces {{ count }}.</p>
+    </div>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<!-- 👆 Esto le dice al navegador que este archivo está escrito en HTML5 (la versión moderna del HTML).
+     No es una etiqueta visible, solo una declaración técnica obligatoria al inicio. -->
+
+<html lang="es">
+<!-- 👆 Esta es la etiqueta principal. Todo el contenido de tu página va dentro de <html> ... </html>.
+     El atributo lang="es" indica que el idioma del contenido es español. -->
+
+<head>
+<!-- 👆 La sección <head> contiene "metadatos", o sea, información sobre la página
+     que no se muestra directamente al usuario. -->
+
+    <meta charset="utf-8">
+    <!-- 👆 Esto define el tipo de codificación de caracteres (UTF-8),
+         que permite usar acentos, eñes y caracteres especiales sin errores. -->
+
+    <title>Bienvenidos</title>
+    <!-- 👆 El <title> es el texto que aparece en la pestaña del navegador (arriba).
+         También es lo que ve Google cuando indexa tu página. -->
+
+</head>
+
+<body>
+<!-- 👆 Aquí empieza la parte visible de la página, todo lo que el usuario verá en pantalla. -->
+
+    <div>
+    <!-- 👆 <div> es un "contenedor" o "bloque". Sirve para agrupar elementos y poder darles estilo o estructura. -->
+
+        <h1>¡Bienvenidos!</h1>
+        <!-- 👆 <h1> significa "encabezado principal". Es el título más grande de la página. 
+             Los encabezados van del <h1> (más grande) al <h6> (más pequeño). -->
+
+        <p>Se ha visitado esta página {{ count2 }} veces {{ count }}.</p>
+        <!-- 👆 <p> significa "párrafo". Sirve para mostrar texto normal.
+             Dentro del texto ves {{ count2 }} y {{ count }}:
+             → Esos son *marcadores de Jinja2* (el motor de plantillas que usa Flask).
+             → Flask reemplazará esos valores por variables que le envíes desde Python.
+             Por ejemplo, si en tu código haces:
+                 render_template("index.html", count2=5, count=10)
+             el navegador mostrará:
+                 Se ha visitado esta página 5 veces 10.
+             Si no los pones entre llaves, Flask no los reemplaza y se muestran literalmente. -->
+    </div>
+
+</body>
+<!-- 👆 Fin del cuerpo visible de la página. -->
+
+</html>
+<!-- 👆 Fin del documento HTML. -->
