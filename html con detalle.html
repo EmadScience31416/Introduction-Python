@@ -1,0 +1,57 @@
+<!DOCTYPE html> <!-- Declara que este documento es HTML5. Ayuda a los navegadores a interpretar bien el contenido. -->
+<html lang="es"> <!-- Raíz del documento. lang="es" indica que el contenido está en español (mejora accesibilidad y SEO). -->
+<head> <!-- Cabecera: acá van metadatos, títulos, fuentes, estilos, etc. -->
+    <meta charset="utf-8"> <!-- Conjunto de caracteres UTF-8 para que se muestren bien tildes, eñes, etc. -->
+    <title>Bienvenidos</title> <!-- Título que aparece en la pestaña del navegador. -->
+
+    <!-- Sugerencia al navegador para “preconectar” al dominio de fuentes (optimiza performance). -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <!-- Importa la fuente “Rubik” desde Google Fonts para usarla en CSS. -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+
+    <style>
+        /* Bloque de estilos CSS “en línea” (podrías ponerlos en un .css aparte) */
+        body {
+            /* Aplica la fuente Rubik (si falla, usa una sans-serif genérica) */
+            font-family: 'Rubik', sans-serif;
+
+            /* Color de fondo gris clarito de toda la página */
+            background-color: #f5f5f5;
+        }
+
+        div {
+            /* Centra el texto del contenido dentro del <div> */
+            text-align: center;
+
+            /* Deja un margen superior de 50px para que no quede pegado arriba */
+            margin-top: 50px;
+        }
+
+        h1 {
+            /* Color de texto azul para el título principal */
+            color: blue;
+
+            /* Tamaño de fuente grande. “pt” son puntos tipográficos; común en impresión, 
+               en web suele usarse más “px”, “rem” o “em”, pero igual funciona. */
+            font-size: 40pt;
+        }
+
+        p {
+            /* Tamaño del texto del párrafo */
+            font-size: 24pt;
+        }
+    </style>
+</head>
+
+<body> <!-- Cuerpo: lo que realmente se muestra en la página. -->
+    <div> <!-- Contenedor simple para agrupar el título y el párrafo. -->
+        <h1>¡Bienvenidos!</h1> <!-- Encabezado principal (nivel 1). Solo uno por página es buena práctica. -->
+
+        <!-- Este texto muestra un contador de visitas. 
+             Las llaves {{ count }} NO son HTML: son una “plantilla” (placeholder) de Jinja2 (Flask). 
+             Cuando el servidor renderiza la página, reemplaza {{ count }} por un número real. -->
+        <p>Se ha visitado esta página {{ count }} veces.</p>
+    </div>
+</body>
+</html>
